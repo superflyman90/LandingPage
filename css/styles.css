@@ -19,7 +19,7 @@ a {
 .header {
   margin: 0;
   padding: 0;
-  height: 90px;
+  height: 70px;
   background: rgb(198, 198, 226);
 }
 
@@ -41,10 +41,33 @@ a {
 }
 .menu {
   align-self: flex-end;
+  line-height: 35px;
 }
+
 .menu .menu-item {
   list-style-type: none;
   display: inline-block;
-  margin-left: 20px;
-  line-height: 60px;
+  margin-left: 35px;
+}
+.menu-items-link {
+  display: block;
+  list-style-type: none;
+  margin: 55px;
+}
+
+@media (max-width: 850px) {
+  .header {
+    height: auto;
+  }
+  .header-container {
+    flex-direction: column;
+  }
+  .menu {
+    align-self: center;
+  }
+
+  .menu .menu-item {
+    margin: 15px auto;
+    display: block;
+  }
 }
