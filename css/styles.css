@@ -23,7 +23,9 @@ a {
   margin: 0;
   padding: 0;
   height: 70px;
-  /* background: rgb(198, 198, 226); */
+  background-color: rgb(114, 114, 143);
+  border-bottom: 2px solid #fff;
+  z-index: 0;
 }
 
 .header-container {
@@ -88,15 +90,16 @@ a {
 .banner-content h2 {
   font-size: 28px;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   margin-top: 5px;
 }
 .banner-content p {
-  font-size: 15px;
+  font-size: 25px;
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   text-align: center;
 }
 .banner-content .btn-success {
@@ -115,12 +118,35 @@ a {
 /* Vignettes */
 .vignettes {
   position: relative;
-  height: 500px;
+  height: auto;
   width: 100%;
   max-width: 100%;
   background-color: darkgrey;
   top: -75px;
   overflow: hidden;
+}
+.container-vignettes {
+  width: 90%;
+  margin: 5px auto;
+  padding: 15px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.thumbnail {
+  width: 28%;
+  height: 80%;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 10px 5px 5px darkmagenta;
+}
+
+/* Footer */
+footer {
+  height: 90px;
+  background-color: darkmagenta;
 }
 
 /* Media Queries */
@@ -148,25 +174,41 @@ a {
   .banner {
     top: 0;
   }
+  .container-vignettes {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: stretch;
+  }
+  .thumbnail {
+    width: 90%;
+    align-self: center;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 10px 5px 5px darkmagenta;
+  }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 450px) {
   .banner-content {
     align-self: flex-start;
     bottom: 50%;
   }
   .banner-content h2 {
-    font-size: 18px;
+    font-size: 12px;
     text-align: center;
     margin-bottom: 0;
-    margin-top: 2px;
+    margin-top: 0;
   }
   .banner-content p {
-    font-size: 15px;
-    background: -webkit-linear-gradient(#eee, #333);
-    -webkit-background-clip: text;
+    font-size: 8px;
+    -webkit-background-clip: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 2px;
+    margin: 0;
     text-align: center;
   }
   .banner-content .btn-success {
@@ -177,7 +219,7 @@ a {
     border-radius: 3px;
     padding: 2px 2px;
     box-shadow: darkblue;
-    font-size: 10px;
+    font-size: 7px;
     font-weight: 200;
     margin-bottom: 5px;
   }
