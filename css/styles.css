@@ -1,10 +1,50 @@
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Get Rek";
+  src: url("../fonts/Get\ Rekt.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto-Medium", sans-serif;
+}
+a {
+  text-decoration: none;
 }
 
 .header {
   margin: 0;
+  padding: 0;
   height: 90px;
   background: rgb(198, 198, 226);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo-place .logo {
+  text-decoration: none;
+  font-family: "Get Rek";
+  font-size: 35px;
+  letter-spacing: 1px;
+}
+.menu {
+  align-self: flex-end;
+}
+.menu .menu-item {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 20px;
+  line-height: 60px;
 }
