@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0;
+  height: 90px;
+  background: rgb(198, 198, 226);
+}
